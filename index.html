@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Two Games</title>
+</head>
+<body>
+    <h1>Max Beard</h1>
+    <h1>Shall We Play a Game?</h1>
+
+    <div class="tabs">
+        <ul>
+            <li class="trigger" data-target="#coinToss">Coin Toss</li>
+            <li class="trigger" data-target="#guessingGame">Guessing Game</li>
+        </ul>
+
+        <div class="content" id="coinToss">
+            <h2>Toss a Coin</h2>
+            <div class="buttons">
+                <button value="heads">Heads</button>
+                <button value="tails">Tails</button>
+            </div>
+
+            <img src="img/both.jpg" alt="">
+            
+            <div class="feedback"></div>
+            <div class="winLoss"></div>
+        </div>
+
+        <div class="content" id="guessingGame">
+            <h2>Guessing Game</h2>
+            <p>
+                I have selected a random number between 1 and 100.<br>
+                See if you can guess it in 10 turns or fewer.<br>
+                I'll tell you if your guess was too high or too low.
+            </p>
+
+            <form>
+                <label for="guess">Enter a guess: </label>
+                <input type="text" id="guess" name="guess">
+            </form>
+
+            <p class="previous"></p>
+            <p class="result"><span></span></p>
+        </div>
+    </div>
+
+    <script src="scripts/tab.js"></script>
+    <script src="scripts/coinToss.js"></script>
+    <script src="scripts/guessing.js"></script>
+</body>
+</html>
